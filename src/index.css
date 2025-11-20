@@ -1,0 +1,343 @@
+@import 'antd/dist/reset.css';  
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+/* فونت اصلی فارسی */
+* {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* پس‌زمینه گرادیانت */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* افکت شیشه‌ای برای کارت‌ها */
+.ant-card {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.ant-card-hoverable:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.ant-card-cover img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.ant-card-hoverable:hover .ant-card-cover img {
+  transform: scale(1.15);
+}
+
+/* دکمه‌های اصلی */
+.ant-btn-primary {
+  height: 52px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 16px !important;
+  background: linear-gradient(45deg, #06022f, #ee5a52) !important;
+  border: none !important;
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.ant-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 107, 107, 0.5);
+}
+
+/* دکمه بدون لاگین */
+.ant-btn:not(.ant-btn-primary) {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #ff4d4f !important;
+  border: 2.5px solid #ff4d4f !important;
+  font-weight: 700;
+  border-radius: 16px !important;
+}
+
+/* عنوان‌ها */
+.ant-typography h1, .ant-typography h2, .ant-typography h3 {
+  background: linear-gradient(90deg, #ffe259, #ffa751);
+  -webkit-text-fill-color: transparent;
+  font-weight: 800 !important;
+}
+
+/* نوتیفیکیشن  */
+.ant-message-notice-content {
+  border-radius: 16px !important;
+  padding: 16px 24px !important;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* اسکرول بار  */
+
+::-webkit-scrollbar {
+  width: 12px;           /* ضخامت اسکرول بار */
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff5252, #e91e63);
+  background-clip: content-box;
+}
+
+/* برای فایرفاکس */
+* {
+  scrollbar-color: #ff6b6b rgba(255, 255, 255, 0.1);
+  scrollbar-width: thin;
+}
+
+/* انیمیشن ورود */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ant-card {
+  animation: slideUp 0.7s ease-out;
+}
+
+
+.ant-menu-horizontal {
+  background: linear-gradient(135deg, #afafef, #16213e) !important; /* تیره و عمیق */
+  border-bottom: 3px solid #ff6b6b !important; /* خط قرمز پایین هدر */
+  height: 70px !important;
+  line-height: 70px !important;
+  padding: 0 50px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+/* متن و آیکون‌ها */
+.ant-menu-horizontal > .ant-menu-item a,
+.ant-menu-horizontal > .ant-menu-item {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* هاور و انتخاب شده */
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-item-selected {
+  background: rgba(255, 107, 107, 0.25) !important;
+  border-radius: 14px;
+  color: #ff6b6b !important;
+}
+
+/* خط زیر آیتم انتخاب شده (قرمز) */
+.ant-menu-horizontal > .ant-menu-item::after {
+  border-bottom: 3px solid #ff6b6b !important;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover::after,
+.ant-menu-horizontal > .ant-menu-item-selected::after {
+  transform: scaleX(0.8);
+}
+
+/* آیکون‌ها */
+.ant-menu-horizontal .anticon {
+  font-size: 19px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover .anticon {
+  transform: scale(1.2);
+  color: #ff6b6b;
+}
+
+/* وقتی اسکرول کردی هدر یه کم روشن‌تر بشه  */
+.ant-menu-horizontal.scrolled {
+  background: linear-gradient(135deg, #22223b, #1e1e38) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+/* =====================dashboard style ====================== */
+
+.dashboard-clean {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.dashboard-greeting {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px !important;
+  font-weight: 900 !important;
+  background: linear-gradient(90deg, #ffe259, #ffa751);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  z-index: 10;
+}
+
+/* کارت اصلی — سفید و وسط صفحه */
+.dashboard-clean-card {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff !important;
+  border-radius: 24px !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* هدر کارت — خاکستری خیلی کم‌رنگ و شیک */
+.dashboard-clean-card .ant-card-head {
+  background: #f8f9fa !important;
+  border-bottom: 1px solid #e9ecef !important;
+  padding: 24px 32px !important;
+}
+
+.dashboard-clean-card .ant-card-head-title {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #2d3436 !important;
+  text-align: center;
+}
+
+/* جدول — کاملاً تمیز و حرفه‌ای */
+.clean-order-table .ant-table {
+  background: white !important;
+}
+
+.clean-order-table .ant-table-thead > tr > th {
+  background: #f1f3f5 !important;           /* خاکستری خیلی کم‌رنگ */
+  color: #636e72 !important;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center !important;
+  border-bottom: 2px solid #dfe6e9 !important;
+  padding: 16px 12px !important;
+}
+
+.clean-order-table .ant-table-tbody > tr > td {
+  padding: 20px 12px !important;
+  text-align: center;
+  font-size: 17px;
+  color: #2d3436;
+  border-bottom: 1px solid #eee;
+}
+
+.clean-order-table .ant-table-tbody > tr:hover > td {
+  background: #f8f9fa !important;
+}
+
+/* ستون‌ها */
+.item-name {
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.item-quantity {
+  font-weight: 700;
+  color: #e17055;
+}
+
+.item-total {
+  font-weight: 800;
+  color: #d63031;
+  font-size: 18px;
+}
+
+
+.total-section-clean {
+  padding: 32px;
+  text-align: center;
+  background: #f8f9fa;
+  border-top: 3px solid #ffeaa7;
+}
+
+.total-label {
+  font-size: 20px;
+  color: #636e72;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.total-price-clean {
+  font-size: 30px !important;
+  font-weight: 900 !important;
+  background: linear-gradient(90deg, #fdcb6e, #e17055);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* وقتی سفارشی نیست */
+.empty-cart-icon {
+  font-size: 100px !important;
+  color: #b2bec3;
+}
+
+.empty-text {
+  font-size: 24px;
+  color: #636e72;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/*  */
+.header-desktop { display: block; }
+.header-mobile   { display: none; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: sticky; top: 0; z-index: 1000; }
+
+.mobile-logo {
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  padding: 16px;
+  background: linear-gradient(90deg, #ffe259, #ffa751);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .header-desktop { display: none !important; }
+  .header-mobile   { display: block !important; }
+}
